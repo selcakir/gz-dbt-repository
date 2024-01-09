@@ -7,18 +7,16 @@ sources:
     tables:
       - name: sales
         identifier: raw_gz_sales
-        description: sales data of greenweez / orders and pdt id are the identifiers
-        columns:
-          - name: orders_id
-                  pdt_id
-            description: identifier
-            tests:
-              - not_null
-              - unique   
+        tests:
+          - not_null:
+              column_name: "(pdt_id || '_' || orders_id)"
+          - unique:
+              column_name: "(pdt_id || '_' || orders_id)"
+             
       - name: product
-        identifier: raw_gz_product / products id is the pk
+        identifier: raw_gz_product 
         description: product data of greenweez
-
+    
               
       - name: ship
         identifier: raw_gz_ship
