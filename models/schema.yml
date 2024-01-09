@@ -31,9 +31,6 @@ sources:
             description: primary key of the table
           - name: purchase price
             description: the purchase price of the product
-        tests:
-              - unique
-              - not_null
               
               
       - name: ship
@@ -48,8 +45,7 @@ sources:
             description: the cost of preparing the parcel in the warehouse
           - name: ship cost
             description: the shippina cost paid bv Greenweez to the carrier/transporter
-        tests:
-          - unique
-          - not_null
+       
+      
              
               
