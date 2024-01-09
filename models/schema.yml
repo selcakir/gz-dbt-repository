@@ -3,10 +3,26 @@ version: 2
 sources:
   - name: raw
     schema: gz_raw_data
+    description: greenweez data source
     tables:
       - name: sales
         identifier: raw_gz_sales
+        description: sales data of greenweez / orders and pdt id are the identifiers
+        columns:
+          - name: orders_id
+                  pdt_id
+            description: identifier
+            tests:
+              - not_null
+              - unique   
       - name: product
-        identifier: raw_gz_product
+        identifier: raw_gz_product / products id is the pk
+        description: product data of greenweez
+
+              
       - name: ship
         identifier: raw_gz_ship
+        description: shiping info data of greenweez / orders id is the prmary key
+       
+             
+              
