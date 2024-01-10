@@ -64,6 +64,9 @@ sources:
             description: count of impressions of campaign
           - name: click
             description: count of clicks
+        tests:
+          - unique:
+              column_name: "(date_date || '-' || campaign_key)"
       - name: bing
         identifier: raw_gz_bing
         description: campaign of bing and costs of ads and clicks
@@ -82,6 +85,9 @@ sources:
             description: count of impressions of campaign
           - name: click
             description: count of clicks
+        tests:
+          - unique:
+              column_name: "(date_date || '-' || campaign_key)"
       - name: criteo
         identifier: raw_gz_criteo
         description: campaign of criteo and costs of ads and clicks
@@ -99,7 +105,10 @@ sources:
           - name: impression
             description: count of impressions of campaign
           - name: click
-            description: count of clicks      
+            description: count of clicks 
+        tests:
+          - unique:
+              column_name: "(date_date || '-' || campaign_key)"     
       - name: facebook
         identifier: raw_gz_facebook
         description: campaign of facebook and costs of ads and clicks
@@ -117,4 +126,7 @@ sources:
           - name: impression
             description: count of impressions of campaign
           - name: click
-            description: count of clicks        
+            description: count of clicks
+        tests:
+          - unique:
+              column_name: "(date_date || '-' || campaign_key)"
