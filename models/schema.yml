@@ -46,7 +46,75 @@ sources:
             description: the cost of preparing the parcel in the warehouse
           - name: ship cost
             description: the shippina cost paid bv Greenweez to the carrier/transporter
-       
-      
-             
-              
+      - name: adwords
+        identifier: raw_gz_adwords
+        description: campaign of adwords and costs of ads and clicks
+        columns:
+          - name: date_date 
+            description: date of adwords campaign
+          - name: paid_source
+            description: source of payment 
+          - name: campaign_key
+            description: key of the campigns
+          - name: camPGN_name
+            description: name of the campaigns includes product name, country   
+          - name: ads_cost
+            description: cost per ad   
+          - name: impression
+            description: count of impressions of campaign
+          - name: click
+            description: count of clicks
+      - name: bing
+        identifier: raw_gz_bing
+        description: campaign of bing and costs of ads and clicks
+        columns:
+          - name: date_date 
+            description: date of bing campaign
+          - name: paid_source
+            description: source of payment 
+          - name: campaign_key
+            description: key of the campigns
+          - name: camPGN_name
+            description: name of the campaigns includes product name, country   
+          - name: ads_cost
+            description: cost per ad   
+          - name: impression
+            description: count of impressions of campaign
+          - name: click
+            description: count of clicks
+      - name: criteo
+        identifier: raw_gz_criteo
+        description: campaign of criteo and costs of ads and clicks
+        columns:
+          - name: date_date 
+            description: date of criteo campaign
+          - name: paid_source
+            description: source of payment 
+          - name: campaign_key
+            description: key of the campigns
+          - name: camPGN_name
+            description: name of the campaigns same as campaign key  
+          - name: ads_cost
+            description: cost per ad   
+          - name: impression
+            description: count of impressions of campaign
+          - name: click
+            description: count of clicks      
+      - name: facebook
+        identifier: raw_gz_facebook
+        description: campaign of facebook and costs of ads and clicks
+        columns:
+          - name: date_date 
+            description: date of criteo campaign
+          - name: paid_source
+            description: source of payment 
+          - name: campaign_key
+            description: key of the campigns
+          - name: camPGN_name
+            description: name of the campaigns including type of campaign 
+          - name: ads_cost
+            description: cost per ad   
+          - name: impression
+            description: count of impressions of campaign
+          - name: click
+            description: count of clicks        
